@@ -45,7 +45,7 @@
         font-family: 'Playfair Display', serif;
         color: white;
         font-weight: 200;
-        font-size: 36px;
+        font-size: 48px;
         padding-bottom: 30px;
     }
 
@@ -58,7 +58,7 @@
     .info-contacts p {
         font-family: 'Oswald', sans-serif;
         color: white;
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .contact-english {

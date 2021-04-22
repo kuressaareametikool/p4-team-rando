@@ -1,60 +1,55 @@
 <template>
-  <div class="container">
-    <div>
-     <layout />
-      </div>
+  <div class="poster">
+    <div class="info"></div>
+    <div class="picture">
+      <posters />
     </div>
   </div>
 </template>
 
 <script>
-    import layout from "../layouts/default";
-    import contacts from "../components/contacts"
+import contacts from "../components/contacts";
+import posters from "../components/posters";
 export default {
     head() {
     return {
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
-    components:{layout}
-    components:{contacts}
+    components:{
+      contacts, posters
+    }
   },
 };
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+.poster {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 1080px;
+  height: 1920px;
+  background-color: #40362d;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.picture {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  width: 810px;
+  height: 1353px;
+  background-color: white;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.info {
+  position: absolute;
+  bottom: 0px;
+  width: 1080px;
+  height: 470px;
+  background-color: #2a221b;
 }
 </style>

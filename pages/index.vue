@@ -1,5 +1,6 @@
 <template>
   <div class="poster">
+      <logo class="absolute left-0 ml-12" />
     <div class="info">
       <info />
     </div>
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import logo from "../components/Logo";
 import contacts from "../components/contacts";
 import posters from "../components/posters";
 import info from "../components/info";
@@ -29,7 +31,7 @@ export default {
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
     components:{
-      contacts, posters, info
+      contacts, posters, info, logo
     }
   },
 };
@@ -52,9 +54,9 @@ export default {
 .picture {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 25px;
-  width: 810px;
-  height: 1353px;
+  margin-top: 100px;
+  width: 841px;
+  height: 1189px;
   background-color: white;
 }
 

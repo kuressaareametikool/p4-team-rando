@@ -1,18 +1,22 @@
 <template>
   <div class="container">
     <div>
-     <h1>tere</h1>
+     <layout />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+    import layout from "../layouts/default";
+    import contacts from "../components/contacts"
 export default {
     head() {
     return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+        script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
+    components:{layout}
+    components:{contacts}
   },
 };
 </script>

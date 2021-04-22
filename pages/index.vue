@@ -1,7 +1,9 @@
 <template>
   <div class="poster">
       <logo class="absolute left-0 ml-12" />
-    <div class="info"></div>
+    <div class="info">
+      <info />
+    </div>
     <div class="picture">
       <posters :posters="posters" />
     </div>
@@ -12,6 +14,7 @@
 import logo from "../components/Logo";
 import contacts from "../components/contacts";
 import posters from "../components/posters";
+import info from "../components/info";
 export default {
   async asyncData({ $content }) {
     const posters = await $content("Poster").fetch();
@@ -22,10 +25,13 @@ export default {
   },
     head() {
     return {
+      link: [
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }, { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap" }
+    ],
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
     components:{
-      contacts, posters, logo
+      contacts, posters, info, logo
     }
   },
 };

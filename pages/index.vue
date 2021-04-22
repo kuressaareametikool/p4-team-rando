@@ -2,7 +2,7 @@
   <div class="poster">
     <div class="info"></div>
     <div class="picture">
-      <posters />
+      <posters :posters="posters" />
     </div>
   </div>
 </template>
@@ -11,6 +11,13 @@
 import contacts from "../components/contacts";
 import posters from "../components/posters";
 export default {
+  async asyncData({ $content }) {
+    const posters = await $content("Poster").fetch();
+
+    return {
+      posters,
+    };
+  },
     head() {
     return {
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],

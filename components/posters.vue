@@ -1,16 +1,15 @@
 <template>
-	<ul>
-		<li v-for="(post,index) of posts" :key="index">{{ post.title }}</li>	
-	</ul>
+	<div>
+		<img v-for="(poster,index) in posters" :key="index" :src="poster.poster" alt="">
+	</div>
 </template>
 <script>
 export default {
-   async asyncData({ $content }) {
-    const posts = await this.$content("Poster").fetch();
-
-    return {
-      posts,
-    };
-  },
+	props: {
+		posters: {
+			type: Array,
+			default: []
+		}
+	}
 };
 </script>

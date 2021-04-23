@@ -19,29 +19,6 @@ Infoekraan Saaremaa muuseumile.
 - [Infoekraan](https://infoekraan.netlify.app/)
 - [Content manager](https://infoekraan.netlify.app/admin/#/collections/infoEkraan)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Build Setup
 
 ```bash

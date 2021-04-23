@@ -1,6 +1,6 @@
 <template>
   <div class="h-full">
-    <hooper :autoPlay="true" :playSpeed="2000" style="height: 100%">
+    <hooper :autoPlay="true" :playSpeed="15000" style="height: 100%">
       <slide v-for="(poster, index) in posters" :key="index">
         <img :src="poster.poster" alt="" class="h-full w-full" />
       </slide>

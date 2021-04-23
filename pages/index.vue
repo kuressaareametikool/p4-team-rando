@@ -23,17 +23,27 @@ export default {
       posters,
     };
   },
-    head() {
+  head() {
     return {
       link: [
-      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }, { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap" }
-    ],
+        { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }, 
+        { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Playfair+Display&display=swap" }
+      ],
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     };
-    components:{
-      contacts, posters, info, logo
-    }
   },
+  components:{
+    contacts, posters, info, logo
+  },
+  created(){
+    window.setInterval(() => {
+      const date = new Date();
+
+      if(date.getHours() === 3 && date.getMinutes() === 0 && date.getSeconds() === 0) {
+        window.location.reload();
+      }
+    }, 1000);
+  }
 };
 </script>
 
